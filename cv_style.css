@@ -1,0 +1,120 @@
+body {
+	/*background-image: url("pizza.jpg");
+	background-attachment: fixed;*/
+	background-color: rgba(192, 177, 164, 0.7);
+	font-family: Trebuchet MS;
+	/*background: url(pp_louis_mini.jpg) no-repeat 800px 20px;*/
+
+}
+
+h1 {
+	width: 50%;
+	min-width: 600px;
+	margin:  auto;
+	background-color: rgba(122, 170, 218, 0.5);
+	text-align: center;
+	font-size: 3.5em;	
+}
+
+h1:hover {
+		text-shadow: 5px 4px 7px grey;
+}
+
+figure {
+	min-height: 100px;
+	background-color: rgba(122, 170, 218, 0.5);
+	float: left;
+	padding:  10px;
+
+
+}
+
+figure:hover {
+	opacity: 0.8; 
+}
+
+.monimage {
+	padding-left: 40px;
+	
+}
+
+figcaption {
+	margin:  auto;
+	font-size: 0.7em;
+	text-align: center;
+	width: 70%;
+}
+
+/*.imageflottante:hover {
+	opacity: 0.8;
+}*/
+
+
+
+nav {
+	background-color: grey;
+	padding: 4px 0px 4px 10px;
+	width: 50%;
+	margin: auto;
+
+
+}
+
+.dessous:hover {
+	border-left: 2px solid #3E6863;
+
+}
+
+h2 {
+	clear: both;
+	padding: 3px;
+	padding-left: 45px;
+	color:  rgba(122,170,218, 1);
+	border: 5px beige double;
+	border-radius: 15px / 10px;
+
+}
+
+/*h2:hover {
+	font-size: 1.6em;
+	
+}*/
+
+a {
+	text-decoration: none;
+	color : black;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:  #3E6863;
+	font-weight: bold;
+}
+
+ul:hover {
+	border-left: 2px solid #3E6863;
+}
+
+li:hover {
+	
+	background-color: rgba(122, 170, 218, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
