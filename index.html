@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            font-size: clamp(1.1rem, 3vw, 1.3rem); /* Increased base font size */
         }
         header {
             background-color: #2B3D50;
@@ -23,17 +24,19 @@
         }
         .logo {
             max-width: 150px;
-            height: auto;
+            height: 150px; /* Fixed height for circular shape */
+            border-radius: 50%; /* Make logo circular */
+            object-fit: cover; /* Ensure image fits within circle */
             margin-bottom: 1rem;
         }
         h1 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-size: clamp(2.5rem, 6vw, 3rem); /* Increased h1 size */
             margin: 0;
         }
         h2 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(1.5rem, 4vw, 1.8rem);
+            font-size: clamp(1.8rem, 5vw, 2.2rem); /* Increased h2 size */
             color: #FF6C5C; /* Corail saturé */
         }
         .container {
@@ -48,7 +51,7 @@
             border-radius: 8px;
         }
         .hero p {
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(1.2rem, 3.5vw, 1.4rem); /* Increased p size */
             max-width: 600px;
             margin: 1rem auto;
         }
@@ -56,10 +59,11 @@
             display: inline-block;
             background-color: #FF6C5C;
             color: #FAFAFA;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem; /* Slightly larger button */
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
+            font-size: clamp(1rem, 3vw, 1.2rem); /* Increased button font size */
             transition: background-color 0.3s;
             margin: 0.5rem;
         }
@@ -81,58 +85,71 @@
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 600;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-size: clamp(1rem, 3vw, 1.2rem); /* Increased link size */
         }
         .social-links a:hover {
             color: #FF6C5C;
         }
-        /* Contact Form */
         .contact-form {
             background-color: #E0E5EB;
             padding: 2rem;
             border-radius: 8px;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto; /* Centers the form horizontally */
+            display: flex;
+            flex-direction: column; /* Ensures fields stack vertically */
+            align-items: center; /* Centers the fields horizontally */
         }
+
         .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            width: 100%; /* Ensures labels span the full width */
+            text-align: left; /* Aligns text to the left */
         }
+
         .contact-form input,
         .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #A8A094; /* Taupe gris chaud */
-            border-radius: 5px;
-            font-family: 'Manrope', sans-serif;
+            width: 100%; /* Ensures inputs span the full width */
+            box-sizing: border-box; /* Prevents padding from affecting width */
         }
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
+
         .contact-form button {
-            background-color: #FF6C5C;
-            color: #FAFAFA;
-            padding: 1rem 2rem;
+            background-color: #FF6C5C; /* Matches the theme color */
+            color: #FAFAFA; /* White text */
+            padding: 1rem 2rem; /* Adjust padding for better size */
             border: none;
-            border-radius: 5px;
+            border-radius: 5px; /* Rounded corners */
+            font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
+            margin-top: 1rem; /* Adds spacing above the button */
+            align-self: center; /* Centers the button */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
         }
+
         .contact-form button:hover {
-            background-color: #e55a4a;
+            background-color: #e55a4a; /* Darker shade on hover */
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .video-section iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            margin: 1rem auto;
+            display: block;
         }
         footer {
             background-color: #A8A094; /* Taupe gris chaud */
             color: #FAFAFA;
             text-align: center;
             padding: 1rem;
-            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Increased footer size */
         }
-        /* Newsletter Pop-Up */
         .popup-overlay {
             display: none;
             position: fixed;
@@ -158,6 +175,7 @@
             font-family: 'Syne', sans-serif;
             color: #2B3D50;
             margin-top: 0;
+            font-size: clamp(1.5rem, 4vw, 1.8rem); /* Increased popup h3 size */
         }
         .popup-content a {
             display: block;
@@ -168,6 +186,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
+            font-size: clamp(1rem, 3vw, 1.2rem); /* Increased popup link size */
         }
         .popup-content a:hover {
             background-color: #e55a4a;
@@ -181,9 +200,8 @@
             color: #2B3D50;
         }
         .popup-content p {
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-size: clamp(1rem, 3vw, 1.2rem); /* Increased popup p size */
         }
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero {
                 padding: 2rem 1rem;
@@ -199,6 +217,7 @@
             }
             .logo {
                 max-width: 120px;
+                height: 120px;
             }
             .about-img {
                 max-width: 150px;
@@ -206,13 +225,16 @@
             .contact-form {
                 padding: 1.5rem;
             }
+            .video-section iframe {
+                height: 300px;
+            }
         }
         @media (max-width: 480px) {
             h1 {
-                font-size: clamp(1.8rem, 6vw, 2rem);
+                font-size: clamp(2rem, 6vw, 2.5rem);
             }
             .hero p {
-                font-size: clamp(0.9rem, 3.5vw, 1rem);
+                font-size: clamp(1rem, 3.5vw, 1.2rem);
             }
             .social-links a {
                 display: block;
@@ -220,16 +242,20 @@
             }
             .logo {
                 max-width: 100px;
+                height: 100px;
             }
             .about-img {
                 max-width: 120px;
+            }
+            .video-section iframe {
+                height: 200px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="./assets/cash routine logo carre.png" alt="Cash Routine Logo" class="logo">
+        <img src="./assets/cash routine logo carre.png" alt="Cash Routine Logo" class="logo" onerror="console.error('Failed to load logo: ./assets/cash routine logo carre.png')">
         <h1>Louis - Cash Routine</h1>
         <p>Cash piloté, vie allégée</p>
     </header>
@@ -242,21 +268,16 @@
         </div>
         <div class="section">
             <h2>Why Cash Routine?</h2>
-            <img src="./assets/photo-louis2.jpg" alt="Louis from Cash Routine" class="about-img">
+            <img src="./assets/photo-louis4.jpg" alt="Louis from Cash Routine" class="about-img" onerror="console.error('Failed to load image: ./assets/photo-louis4.jpg')">
             <p>I'm Louis from Cash Routine, not a guru—I'm learning alongside you. My n8n tutorials and workflows help you automate side hustles, monitor trends, and generate passive income, all from your phone or laptop. From setting up Raspberry Pi to creating AI-driven cash flows, we make it practical, accessible, and real.</p>
         </div>
-        <div class="section social-links">
-            <h2>Join the Community</h2>
-            <p>
-                <a href="https://www.youtube.com/@cash-routine" target="_blank">YouTube</a> |
-                <a href="https://x.com/TheCashRoutines" target="_blank">Threads (X)</a> |
-                <a href="https://www.tiktok.com/@somecashroutine" target="_blank">TikTok</a> |
-                <a href="https://t.me/+pfPxNZdQj_9jYjU0" target="_blank">Telegram</a>
-            </p>
+        <div class="section video-section">
+            <h2>Latest YouTube Videos</h2>
+            <iframe src="https://www.youtube.com/embed/pFLgxJZv4gA" title="Cash Routine Latest Videos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="section">
             <h2>Contact Me</h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/xzzjodql" method="POST">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required>
                 <label for="email">Email</label>
@@ -267,6 +288,15 @@
             </form>
             <p style="text-align: center; margin-top: 1rem;">
                 <a href="https://calendly.com/louis-delahaye/30min" class="cta-button">Or Book a Call via Calendly</a>
+            </p>
+        </div>
+        <div class="section social-links">
+            <h2>Join the Community</h2>
+            <p>
+                <a href="https://www.youtube.com/@cash-routine" target="_blank">YouTube</a> |
+                <a href="https://x.com/TheCashRoutines" target="_blank">Threads (X)</a> |
+                <a href="https://www.tiktok.com/@somecashroutine" target="_blank">TikTok</a> |
+                <a href="https://t.me/+pfPxNZdQj_9jYjU0" target="_blank">Telegram</a>
             </p>
         </div>
     </div>
@@ -283,13 +313,17 @@
         <p>&copy; 2025 Louis - Cash Routine. All rights reserved.</p>
     </footer>
     <script>
-        // Show newsletter pop-up on page load
+        // Show newsletter pop-up on page load if not already shown
         window.onload = function() {
-            document.getElementById('newsletterPopup').style.display = 'flex';
+            if (!localStorage.getItem('newsletterPopupShown')) {
+                document.getElementById('newsletterPopup').style.display = 'flex';
+            }
         };
-        // Close pop-up
+
+        // Close pop-up and set localStorage flag
         function closePopup() {
             document.getElementById('newsletterPopup').style.display = 'none';
+            localStorage.setItem('newsletterPopupShown', 'true');
         }
     </script>
 </body>
